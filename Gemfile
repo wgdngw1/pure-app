@@ -25,7 +25,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
 gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'bootstrap-will_paginate'
 
 
 
