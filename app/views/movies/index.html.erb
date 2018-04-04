@@ -1,10 +1,10 @@
 <h1>Movies#index</h1>
 <p>Find me in app/views/movies/index.html.erb</p>
-<%= image_tag("/image/2017120178.jpg") %>
 
 <% @movies.each do |movie| %>
     <%= movie.title %></br>
     <%= movie.url %></br>
     <%= movie.image%></br>
+    <%= image_tag("/image/#{movie.image.slice(/[0-9]+\/[0-9]+\/[0-9]+/).gsub("/", "")}.jpg")%></br>
     ------------------------------------------</br>
 <% end %>
