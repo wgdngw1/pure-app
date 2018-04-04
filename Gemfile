@@ -30,6 +30,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'bootstrap-will_paginate'
+gem 'ransack'
 
 
 

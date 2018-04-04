@@ -1,5 +1,12 @@
 <h1>一覧</h1>
 
+<%= search_form_for(@search, url:movies_index_path) do |f| %>
+    <%= f.label :title_cont, "Title" %>
+    <%= f.text_field :title_cont %>
+<%= f.submit "Search" %>
+<% end %>
+
+
 <% @movies.each do |movie| %>
     <%= link_to movie.title, movies_show_path(movie) %></br>
     <%= movie.id %></br>
