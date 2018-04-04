@@ -8,3 +8,5 @@
     <%= image_tag("/image/#{movie.image.slice(/[0-9]+\/[0-9]+\/[0-9]+/).gsub("/", "")}.jpg")%></br>
     ------------------------------------------</br>
 <% end %>
+
+<%= will_paginate @movies %>
