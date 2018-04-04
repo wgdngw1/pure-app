@@ -1,2 +1,21 @@
 <h1>Movies#show</h1>
 <p>Find me in app/views/movies/show.html.erb</p>
+<%= link_to "ホーム", root_path %></br>
+
+    <%= @movie.id %></br>
+    <%= @movie.title %></br>
+    <%= @movie.url %></br>
+    <%= @movie.image%></br>
+
+
+    <% if @movie.url.include?("pornhub") %>
+        <iframe width="600" height="400" src="https://jp.pornhub.com/embed/<%= @movie.url.slice!(46..-1) %>" frameborder="0"  scrolling="no" allowfullscreen></iframe>
+    <%  elsif @movie.url.include?("vjav") %>
+        <iframe width="600" height="400" src="https://jp.vjav.com/embed/<%= @movie.url.slice!(/[0-9]+/) %>" frameborder="0" scrolling="no" allowfullscreen ></iframe>
+    <% elsif @movie.url.include?("jp.txxx.com") %>
+       <iframe width="600" height="400" src="https://jp.txxx.com/embed/<%= @movie.url.slice!(/[0-9]+/) %>" frameborder="0"  scrolling="no" allowfullscreen  ></iframe>
+    <% elsif @movie.url.include?("tube8") %>
+        <iframe width="600" height="400" src="https://www.tube8.com/embed/<%= @movie.url.slice!(22..-1) %>" frameborder="0"  scrolling="no" allowfullscreen  ></iframe>
+    <% else %>
+         <p>other
+    <% end %>
